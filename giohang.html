@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="https://kit.fontawesome.com/f20d460fd9.js" crossorigin="anonymous"></script>
+    <script src="js/sanPham2.js"></script>
+    <style>
+        *{
+         box-sizing: border-box;   
+         margin: 0;
+         padding: 0  ;
+        }
+        img{
+            width: 100%;
+            
+        }
+        input{
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #giohangmua{
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 4px #ddd;
+            margin: 0 auto;
+            max-width: 1100px;
+            padding: 20px;
+
+        }
+        .itemgiohang{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .itemgiohang .hinhAnh img{
+            width: 60px;
+            height: 60px;
+        }
+        .itemgiohang .hinhAnh, .tongtien{
+            flex: 1;
+            margin-left: 20px;
+
+        }
+        .soluong{
+            width: 100px;
+        }
+        .tongtien{
+            font-size: 15px;
+        }
+        .itemgiohang .gia{
+            flex: 2;
+        }
+        .itemgiohang .ten{
+            flex: 3;
+        }
+        .itemgiohang .gia .giagoc{
+            font-size: 12px;
+            text-decoration: line-through;
+            color: red;
+        }
+        .itemgiohang .hanhdong i:hover{
+            color: red;
+        }
+       
+        .khung-thanh-tien{
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+        .khung-thanh-tien p{
+            margin-right: 5px;
+            width: fit-content;
+            
+        }
+        .thanh-tien{
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <div class="tong">
+             <div class="thanh1">
+                 <ul class="sub-menu">
+                     <li>
+                         <a href="/lab5.html"><b>Trang Chủ</b></a>
+                         <ul class="menucon"> 
+                             <li><a href="#">Điện Thoại</a></li>
+                             <li><a href="#">Phụ Kiện</a></li>
+                         </ul>
+                     </li>
+                     <li>
+                         <a href="#"><b>Điện Thoại</b></a>
+                         <ul class="menucon">
+                             <li><a href="#">Iphone</a></li>
+                             <li><a href="#">SamSung</a></li>
+                         </ul>
+                     </li>
+                     <li>
+                         <a href="#"><b>Phụ Kiện</b></a>
+                         <ul class="menucon"> 
+                             <li><a href="#">Tai nghe</a></li>
+                             <li><a href="#">Pin</a></li>
+                             <li><a href="#">Cục sạc</a></li>
+                         </ul>
+                     </li>
+                 </ul>
+             </div>
+             <div class="thanh2">
+                 <a href="#">
+                     <img src="anh/gio.png">
+                 </a>
+             </div>
+        </div>
+
+     </nav> 
+     <div id="giohangmua">
+       
+     </div>
+     <div class ="khung-thanh-tien">
+       <p>Thành tiền : </p>
+       <p class="thanh-tien" id = "thanhtien"> </p>
+     </div>
+     <div class="from">
+        <label for="hoten"> Họ Tên</label>
+        <input type="text" id="hoten">
+        <label id="thongbaoloihoten" for="hoten" class="orror"></label>
+
+        <label for="sodienthoai">Số Điện Thoại</label>
+        <input type="number" id="sodienthoai">
+        <label id="thongbaoloisdt" for="sodienthoai" class="orror"></label>
+
+        <label for="diachi"></label>
+        <input type="text" id="diachi">
+        <label id="thongbaoloidiachi" for="diachi" class="orror"></label>
+        
+        <button onclick="dangki()" class="btn"> Đắng kí</button>
+    </div>
+     <script src="js/hotro.js"></script>
+     <script src="js/giohang.js"></script>
+</body>
+</html>
