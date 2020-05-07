@@ -15,6 +15,7 @@ function docDuLieuLocal(tenData){
 }
 function  ghiDulieuLocal(data,tenData){
     localStorage.setItem(tenData,JSON.stringify(data))
+
 }
 
 function tinhGiaBan(giaGoc,phanTram){

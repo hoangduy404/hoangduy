@@ -50,18 +50,23 @@
    <div id="them-san-pham">
         <label for="hinhAnh">Hình ảnh</label>
         <input type="text" id="hinhAnh">
+        <label id="thongbaoloihinhAnh" for="hinhAnh" class="orror"></label>
 
         <label for="ten">Tên sản phẩm</label>
         <input type="text" id="ten">
+        <label id="thongbaoloiten" for="ten" class="orror"></label>
 
         <label for="giaGoc">Gía gốc sản phẩm</label>
         <input type="number" id="giaGoc">
+        <label id="thongbaoloigiagoc" for="giaGoc" class="orror"></label>
 
         <label for="phanTram">Phần trăm giảm giá (1-100)%</label>
         <input type="number" id="phanTram">
+        <label id="thongbaoloiphantram" for="phanTram" class="orror"></label>
 
         <label for="khuVuc">Khu Vực</label>
         <input type="text" id="khuVuc">
+        <label id="thongbaoloikhuvuc" for="khuVuc" class="orror"></label>
 
         <button onclick="onclickthemsanpham()" class="btn">Thêm sản phẩm mới </button>
    </div>
@@ -103,7 +108,64 @@
            var jsondanhSachSanPham = JSON.stringify(danhSachSanPham);
            localStorage.setItem("danhSachSanPham",jsondanhSachSanPham);
            alert("Thêm sản phẩm thành công")
-       }
+
+           if (kiemtrafromdangki()==true) {
+                console.log("thực hiện đăng kí");
+            }
+        
+        }
+        function kiemtrafromdangki(){
+            var hople = true;
+
+            var nodehinhAnh= document.getElementById("hinhAnh")
+            var nodeten = document.getElementById("ten")
+            var nodegiaGoc = document.getElementById("giaGoc")
+            var nodephanTram = document.getElementById("phanTram")
+            var nodekhuVuc = document.getElementById("khuVuc")
+
+            var hinhAnh = nodehinhAnh.value;
+            var ten = nodeten.value;
+            var giaGoc = nodegiaGoc.value;
+            var phanTram = nodephanTram.value;
+            var khuVuc = nodekhuVuc.value;
+
+            console.log("Họ Tên"+sodienthoai);
+            console.log("số điện thoại"+sodienthoai);
+
+            var  nodethongbaoloihoten = document.getElementById("thongbaoloihoten")
+            var nodethongbaoloisdt = document.getElementById("thongbaoloisdt")
+            nodethongbaoloisdt.innerHTML = "";
+            nodethongbaoloihoten.innerHTML = "";
+
+
+            if (hinhAnh==null||hinhAnh.length <= 0) {
+               
+                nodethongbaoloihoten.innerHTML = "Hình ảnh không được để trống"
+                hople = false;
+            }
+            if (ten == null||ten.length <= 10 || sodienthoai.length > 11) {
+                
+                nodethongbaoloisdt.innerHTML = "Tên sản phẩm không được để trống"
+                hople = false;
+            }
+            if (giaGoc==null||giaGoc.length <= 0) {
+               
+               nodethongbaoloihoten.innerHTML = "Giá gốc không được để trống"
+               hople = false;
+           }
+           if (phanTram==null||phanTram.length <= 0) {
+               
+               nodethongbaoloihoten.innerHTML = "Phần trăm không được để trống"
+               hople = false;
+           }
+           if (khuVuc==null||khuVuc.length <= 0) {
+               
+               nodethongbaoloihoten.innerHTML = "Khu vực không được để trống"
+               hople = false;
+           }
+               
+            return hople;
+        }
    </script>
 </body>
 </html>

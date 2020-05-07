@@ -22,7 +22,7 @@ function hienThiGioHang() {
     }
 
     let nodeChuaGio = document.getElementById("giohangmua");
-    nodeChuaGio.innerHTML = innerHTML;
+    nodeChuaGio.innerHTML = nodeChuaGio.innerHTML + innerHTML;
 
     tinhThanhTien();
 
@@ -54,6 +54,8 @@ function taoNodeGioHang(sanpham, soluong) {
 function onClickXoaSanPham(id) {
     let nodeSanPham = event.target.parentElement;
     nodeSanPham.remove();
+    alert("Xóa sản phẩm thành công")
+
 
     var dataGioHang = docDuLieuLocal("danhSachGioHang");
 
