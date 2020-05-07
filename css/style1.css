@@ -131,8 +131,9 @@ ul.sub-menu > li:hover ul.menucon {
     border-radius: 3px;
     border: none;
     outline: none;
+    box-shadow: 2px 2px 4px  #ddd;
     border: 1px solid #ddd;
-    background-color: white;
+    background-color: gainsboro;
     text-align: center;
     color: black;  
     cursor: pointer;
@@ -196,4 +197,13 @@ ul.sub-menu > li:hover ul.menucon {
     margin-left: 1000px;
     text-align: center;
 
+}
+.thanhduoi{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(194, 57, 80);
+}
+.thanhduoi h1{
+    text-align: center;
+    line-height: 50px;
 }
